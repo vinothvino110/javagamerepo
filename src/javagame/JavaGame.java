@@ -19,19 +19,32 @@ public class JavaGame extends JFrame{
 			System.out.println("keyCode" + keyCode);
 			if(keyCode == e.VK_LEFT)
 			{
-			x--;			
+			if(x<=0)
+				x=0;
+			else
+				x+= -5;
 			}
 			if(keyCode == e.VK_RIGHT)
 			{
-			x++;	
+			if(x>=230)	
+				x=230;
+			else
+				x+= +5;
 			}
 			if(keyCode == e.VK_UP)
 			{
-			y--;	
+				if(y<=30)
+					y=30;
+				else
+					y+= -5;
 			}
 			if(keyCode == e.VK_DOWN)
 			{
-			y++;	
+				if(y>=230)	
+					y=230;
+				else
+					y+= +5;
+				
 			}
 			
 		}
